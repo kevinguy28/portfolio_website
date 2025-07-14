@@ -1,0 +1,245 @@
+.slider .list .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    /* transition: 0.5s; */
+}
+
+.slider .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list .item .content {
+    position: absolute;
+    left: 10%;
+    z-index: 3;
+}
+
+.slider .list .item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, #000 10%, transparent);
+}
+
+/* .slider .list .item .content {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 650px;
+    max-width: 60%;
+    z-index: 1;
+} */
+
+.slider .list .item.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.slider .list .item.active h1,
+.slider .list .item.active h4,
+.slider .list .item.active p {
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 0.1s ease-in-out 1 forwards;
+}
+
+.slider .list .item.active h1 {
+    animation-delay: 0.3s;
+}
+
+.slider .list .item.active h4 {
+    animation-duration: 1.3s;
+}
+
+.arrows {
+    position: absolute;
+    top: 10%;
+    right: 50px;
+    z-index: 100;
+}
+
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    justify-content: center;
+    overflow: auto;
+    align-items: center;
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    /* height: 150px; */
+    filter: brightness(0.5);
+    /* transition: 0.5s; */
+    flex-shrink: 0;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.thumbnail .item.active {
+    filter: brightness(1);
+}
+
+.thumbnail .item .content {
+    position: absolute;
+    inset: auto 10px 10px 10px;
+}
+
+@media screen and (max-width: 640px) {
+    .thumbnail {
+        justify-content: start;
+        bottom: 20px;
+        height: 200px;
+    }
+
+    .thumbnail .item {
+        height: 200px;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .list .item .content {
+        max-width: 80%;
+    }
+
+    .list .item .content.expandCard {
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .list .item .content {
+        max-width: 60%;
+    }
+
+    .list .item .content .arrows {
+        top: 30%;
+    }
+}
+
+@keyframes hideSlider {
+    to {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
+
+.hideCard {
+    /* display:none; */
+    animation: hideSlider 0.5s ease forwards;
+    pointer-events: none;
+}
+
+@keyframes showSlider {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.showCard {
+    animation: showSlider 0.5s ease forwards;
+}
+
+.projectSubheader {
+    font-size: 2rem;
+    font-weight: 200;
+    letter-spacing: 0;
+    line-height: 1.2;
+}
+
+.projectHeader {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.projectDescription {
+    font-size: 1rem;
+    letter-spacing: 0;
+}
+
+.hideDescriptionEx {
+    display: none;
+}
+
+@keyframes showDescriptionEx {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.showDescriptionEx {
+    display: block;
+    animation: showDescriptionEx 0.5s 0.5s ease forwards;
+}
+
+.projectBtns {
+    font-weight: 400;
+    color: #000;
+}
+
+@media screen and (max-width: 400px) {
+    .projectHeader {
+        font-size: 14px;
+    }
+
+    .thumbnail {
+        display: none;
+    }
+
+    .slider {
+        height: 1000px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .projectSubheader {
+        font-size: 1.5rem;
+    }
+
+    .projectHeader {
+        font-size: 2.5rem;
+    }
+
+    .projectDescription {
+        font-size: 1rem;
+    }
+}

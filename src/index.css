@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Play:wght@400;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+    --color-sony-dark-grey: #666564;
+    --color-sony-grey: #7b7673;
+    --color-sony-pink: #e289c3;
+    --color-sony-blue: #638acb;
+    --color-sony-red: #fc0016;
+    --color-sony-green: #05de95;
+
+    --color-sony-logo-red: #fe001e;
+    --color-sony-logo-yellow: #febe00;
+    --color-sony-logo-green: #00a69f;
+    --color-sony-logo-blue: #0069b6;
+
+    --color-sony-logo-dark-blue: #1c0fbd;
+    --color-sony-logo-light-purple: #b496da;
+    --color-light-white: #c7c7c7;
+    --color-dark-blue: #040b13;
+
+    --font-play: "Play", serif;
+    --font-ps2: "ps2", sans-serif;
+}
+
+@font-face {
+    font-family: "ps2";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/public/ps2.ttf") format("truetype");
+}
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    overflow-x: hidden;
+    background-color: #1c1b1b;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
