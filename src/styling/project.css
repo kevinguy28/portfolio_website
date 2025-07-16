@@ -230,6 +230,12 @@
     }
 }
 
+@media screen and (max-height: 700px) {
+    .thumbnail {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .projectSubheader {
         font-size: 1.5rem;
