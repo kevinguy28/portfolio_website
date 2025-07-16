@@ -59,11 +59,11 @@ const ProjectItem = ({
             <div
                 className={`content absolute left-1/10 top-1/5 z-1 bg-white/20 backdrop-blur-md border border-white/30 rounded-xl p-6 shadow-lg contentItem${index} flex flex-col `}
             >
-                <h4 className="projectSubheader">
+                <h4 className="projectSubheader  text-white">
                     {tools.map((tool) => tool).join(" | ")}
                 </h4>
-                <h1 className="projectHeader">{title}</h1>
-                <div className="flex flex-col gap-4 mb-4">
+                <h1 className="projectHeader  text-white">{title}</h1>
+                <div className="flex flex-col gap-4 mb-4 text-white">
                     <p className="projectDescription">{description}</p>
                     <p className="projectDescriptionEx hideDescriptionEx">
                         {descriptionExtended}
