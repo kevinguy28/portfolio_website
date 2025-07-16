@@ -13,7 +13,7 @@ function Home() {
             </section>
             <section className="m-auto w-screen p-4 flex flex-col justify-center lg:justify-end relative md:h-[100vh] bg-dark-blue">
                 <div className="absolute top-0 right-0 w-1/3 h-[100vh] object-contain hidden lg:block">
-                    <img src="/kevingrad.png" alt="" />
+                    <img src="/kevin-transparent.png" alt="" />
                 </div>
 
                 <div className="lg:w-2/3 mx-auto lg:mx-0 w-[85%] text-sony-dark-grey introText ">

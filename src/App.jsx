@@ -213,7 +213,7 @@ function App() {
                                         to={"/"}
                                         className="scroll-link"
                                         href="#visions-target"
-                                        data-img="/kevin.jpg"
+                                        data-img="/kevingrad.png"
                                     >
                                         About
                                     </Link>
